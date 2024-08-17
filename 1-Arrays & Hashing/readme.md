@@ -1,4 +1,5 @@
-# Arrays & Hashing
+# Arrays , Hashing & Sets (C and Python)
+
 
 ## Arrays
 
@@ -63,7 +64,12 @@ int main() {
 
 ```
 
-## Hash Table and Hashing
+While some languages like C use static arrays (fixed size), others like Python, JavaScript, and Ruby use dynamic arrays by default, allowing for flexible resizing at runtime.
+
+
+## Hashing and Hash Tables 
+
+Hashing is a process that converts input data (a key) into a fixed-size code (hash code) using a hash function. This function helps map data to the code consistently , ideally with uniform distribution to minimize the chance of collisions (where two different inputs produce the same hash code).
 
 A hash table is a data structure that efficiently inserts, looks up, and removes key-value pairs. It uses a hash function to translate each key into a distinct array index, where the corresponding value is stored, effectively mapping keys to values.
 
@@ -219,3 +225,39 @@ if __name__ == "__main__":
 
 
 ```
+
+
+### hash tables and sets in python 
+
+**hash tables in Python:**
+
+In Python, the functionality of hash tables is implemented through dictionaries (dict). Python dictionaries allow for efficient storage and retrieval of key-value pairs, where each key is unique. When you assign a value to a key in a dictionary, Python uses a hash function to determine where to store the value in memory. Accessing or modifying this value is done in constant time, O(1), on average.
+
+Here's a brief example of how Python's dictionary works as a hash table:
+
+```python
+my_dict = {"Ahmed": "January", "Achraf": "July"}
+print(my_dict["Ahmed"])  # January
+my_dict["Said"] = "March"
+print(my_dict) #{'Ahmed': 'January', 'Achraf': 'July', 'Said': 'March'}
+```
+
+Python’s dictionaries handle collisions and other complexities internally, allowing developers to focus on using them without worrying about the underlying mechanics.
+
+**Sets in Python:**
+
+Sets in Python are another data structure that internally uses hashing. A set is an unordered collection of unique elements, which means no duplicates are allowed. The elements of a set must be immutable, but the set itself is mutable, allowing for the addition and removal of elements. Since sets are implemented using a hash table, operations like checking if an element exists in the set, adding elements, and removing elements all have an average-case time complexity of O(1).
+
+Here’s a quick example of how sets work in Python:
+
+```python
+my_set = {"banana", "cherry","apple"}
+print("banana" in my_set)  # true
+my_set.add("orange")
+print(my_set)  # {'orange', 'banana', 'cherry', 'apple'}
+my_set.remove("banana")
+print(my_set)  # {'orange', 'cherry', 'apple'}
+```
+
+
+Python sets are particularly useful when you need to eliminate duplicates from a list or when you need fast membership testing .
