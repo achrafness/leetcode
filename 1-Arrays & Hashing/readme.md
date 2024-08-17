@@ -261,3 +261,7 @@ print(my_set)  # {'orange', 'cherry', 'apple'}
 
 
 Python sets are particularly useful when you need to eliminate duplicates from a list or when you need fast membership testing .
+
+**performance:**
+
+In terms of performance, using a set is more efficient when you only need to store unique items and perform operations like checking membership. However, if you need to associate data with each key, a dictionary is necessary despite the slight performance cost.
